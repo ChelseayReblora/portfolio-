@@ -9,6 +9,9 @@ const projects = [
     d: "Common Back Muscle Exercises in Gyms: Form Detection Using Optical Flow and Gated Recurrent Unit Networks. Motion features from exercise video feed a GRU model that judges form, developed with academic researchers and physical-training consultants. The computer vision code, including ROI point isolation for feature extraction, is in the backex-feature-roi-point-isolation repository.",
     tags: ["Computer Vision", "Optical Flow", "GRU", "Deep Learning", "Python"],
     href: `${GH}/backex-feature-roi-point-isolation` },
+  { t: "Automated Stock Allocation IoT Prototype", m: "HARDWARE + SOFTWARE · RETAIL CLIENT",
+    d: "An automated stock allocation prototype designed for a retail client, integrating microcontrollers, an FPGA and cloud synchronization.",
+    tags: ["IoT", "Microcontrollers", "FPGA", "Cloud Sync"] },
   { t: "Firebase Inventory Application", m: "SOFTWARE DEVELOPMENT · REPOSITORY",
     d: "An inventory app integrated with Firebase for cloud-backed data storage and management.",
     tags: ["Firebase", "App Dev", "Cloud DB"], href: `${GH}?tab=repositories` },
@@ -20,6 +23,7 @@ const skills = [
   ["Security", "Network defense · Endpoint security · Ethical hacking · Cyber operations"],
   ["Systems", "Linux terminal · Bash scripting · Cisco network configuration"],
   ["AI / ML", "Deep learning · Computer vision · Optical flow · GRU networks"],
+  ["Hardware & IoT", "Microcontrollers · FPGA · Cloud synchronization"],
   ["Development", "Software testing & QA · Firebase apps · GitHub workflow"],
 ];
 const certs = ["CCNA", "CyberOps Associate", "Ethical Hacker", "Endpoint Security", "IT Essentials", "+ 3 more Cisco NetAcad certificates", "NVIDIA Deep Learning"];
@@ -81,7 +85,7 @@ export default function App() {
             <div className="tag">// COMPUTER ENGINEERING · CYBERSECURITY · MAPÚA UNIVERSITY</div>
             <h1>Chelseay Anne<br />D. <span>Reblora</span></h1>
             <Typing />
-            <p className="lead">Fresh Computer Engineering graduate majoring in Cybersecurity, open to roles in cybersecurity, AI and software development. I build things that detect, defend and understand.</p>
+            <p className="lead">Fourth-year Computer Engineering student at Mapúa University majoring in Cybersecurity, currently looking for an OJT in cybersecurity, AI or software development. I build things that detect, defend and understand.</p>
             <div className="btns">
               <a className="btn p" href="#projects">View projects</a>
               <a className="btn" href={GH} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -93,11 +97,11 @@ export default function App() {
         <Section id="about" n="01" title="About">
           <div className="about">
             <Reveal>
-              <p className="lead">I’m a Computer Engineering graduate from Mapúa University with a cybersecurity major. My thesis sits where security-minded engineering meets AI: detecting exercise form with optical flow and GRU networks. I work comfortably in the Linux terminal, script in Bash and configure Cisco networks, and I enjoy translating technical work for non-technical collaborators.</p>
+              <p className="lead">I’m a Computer Engineering student at Mapúa University specializing in Cybersecurity. While my core focus is on network defense (working comfortably in Linux, scripting in Bash, and configuring Cisco networks), I also have a strong background in AI and hardware-software design. Alongside co-developing a computer vision thesis using optical flow and GRU networks to track exercise form, I recently designed an automated stock allocation IoT prototype for a retail client, integrating microcontrollers, FPGA, and cloud synchronization. I enjoy bridging the gap between complex engineering and real-world solutions.</p>
             </Reveal>
             <Reveal delay={0.1}>
               <div className="card"><div className="stat">
-                <b>Education</b> BS Computer Engineering<br />
+                <b>Education</b> BS Computer Engineering (4th year)<br />
                 <b>School</b> Mapúa University<br />
                 <b>Focus</b> Cybersecurity<br />
                 <b>Award</b> Best Presenter, 8th Int’l Conf. on Video, Signal and Image Processing
@@ -145,7 +149,7 @@ export default function App() {
         <Section id="contact" n="05" title="Contact">
           <Reveal>
             <div className="card">
-              <p className="lead">I’m a Computer Engineering student at Mapúa University specializing in Cybersecurity. While my core focus is on network defense (working comfortably in Linux, scripting in Bash, and configuring Cisco networks), I also have a strong background in AI and hardware-software design. Alongside co-developing a computer vision thesis using optical flow and GRU networks to track exercise form, I recently designed an automated stock allocation IoT prototype for a retail client, integrating microcontrollers, FPGA, and cloud synchronization. I enjoy bridging the gap between complex engineering and real-world solutions.</p>
+              <p className="lead">Open to OJT opportunities in cybersecurity, AI and software development. The quickest way to see my work or reach me is GitHub.</p>
               <div className="btns"><a className="btn p" href={GH} target="_blank" rel="noopener noreferrer">github.com/ChelseayReblora ↗</a></div>
             </div>
           </Reveal>
