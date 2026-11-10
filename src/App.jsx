@@ -145,7 +145,7 @@ export default function App() {
         <Section id="contact" n="05" title="Contact">
           <Reveal>
             <div className="card">
-              <p className="lead">Open to cybersecurity, AI and software roles. The quickest way to see my work or reach me is GitHub.</p>
+              <p className="lead">I’m a Computer Engineering student at Mapúa University specializing in Cybersecurity. While my core focus is on network defense (working comfortably in Linux, scripting in Bash, and configuring Cisco networks), I also have a strong background in AI and hardware-software design. Alongside co-developing a computer vision thesis using optical flow and GRU networks to track exercise form, I recently designed an automated stock allocation IoT prototype for a retail client, integrating microcontrollers, FPGA, and cloud synchronization. I enjoy bridging the gap between complex engineering and real-world solutions.</p>
               <div className="btns"><a className="btn p" href={GH} target="_blank" rel="noopener noreferrer">github.com/ChelseayReblora ↗</a></div>
             </div>
           </Reveal>
