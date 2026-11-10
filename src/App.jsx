@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const GH = "https://github.com/ChelseayReblora";
+const EMAIL = "Chelseay1125@gmail.com";
+const LI = "https://www.linkedin.com/in/chelseay-anne-reblora-50914a343/";
 const roles = ["Computer Engineer", "Cybersecurity Specialist", "AI & Computer Vision Builder", "Software Developer"];
 
 const projects = [
@@ -12,6 +14,10 @@ const projects = [
   { t: "Automated Stock Allocation IoT Prototype", m: "HARDWARE + SOFTWARE · RETAIL CLIENT",
     d: "An automated stock allocation prototype designed for a retail client, integrating microcontrollers, an FPGA and cloud synchronization.",
     tags: ["IoT", "Microcontrollers", "FPGA", "Cloud Sync"] },
+  { t: "Job Application Tracker", m: "WEB APP · REPOSITORY",
+    d: "A pastel-themed web app for tracking job applications. Add, search and filter applications by status (Applied, Interview, Offer, Rejected), with live status counts and data saved in the browser. Built in vanilla JavaScript with input escaping to prevent HTML injection.",
+    tags: ["JavaScript", "HTML/CSS", "localStorage", "XSS-safe input"],
+    href: `${GH}/JobApplication_Tracker`, live: "https://chelseayreblora.github.io/JobApplication_Tracker/" },
   { t: "Firebase Inventory Application", m: "SOFTWARE DEVELOPMENT · REPOSITORY",
     d: "An inventory app integrated with Firebase for cloud-backed data storage and management.",
     tags: ["Firebase", "App Dev", "Cloud DB"], href: `${GH}?tab=repositories` },
@@ -24,7 +30,7 @@ const skills = [
   ["Systems", "Linux terminal · Bash scripting · Cisco network configuration"],
   ["AI / ML", "Deep learning · Computer vision · Optical flow · GRU networks"],
   ["Hardware & IoT", "Microcontrollers · FPGA · Cloud synchronization"],
-  ["Development", "Software testing & QA · Firebase apps · GitHub workflow"],
+  ["Development", "JavaScript · HTML/CSS · Firebase · Software testing & QA · GitHub workflow"],
 ];
 const certs = ["CCNA", "CyberOps Associate", "Ethical Hacker", "Endpoint Security", "IT Essentials", "+ 3 more Cisco NetAcad certificates", "NVIDIA Deep Learning"];
 
@@ -119,7 +125,12 @@ export default function App() {
                   <h3>{p.t}</h3>
                   <p>{p.d}</p>
                   <div className="chips">{p.tags.map((t) => <span className="chip" key={t}>{t}</span>)}</div>
-                  {p.href && <p><a className="lnk" href={p.href} target="_blank" rel="noopener noreferrer">view on github ↗</a></p>}
+                  {(p.href || p.live) && (
+                    <p>
+                      {p.href && <a className="lnk" href={p.href} target="_blank" rel="noopener noreferrer">view on github ↗</a>}
+                      {p.live && <> &nbsp;·&nbsp; <a className="lnk" href={p.live} target="_blank" rel="noopener noreferrer">live demo ↗</a></>}
+                    </p>
+                  )}
                 </article>
               </Reveal>
             ))}
@@ -149,8 +160,13 @@ export default function App() {
         <Section id="contact" n="05" title="Contact">
           <Reveal>
             <div className="card">
-              <p className="lead">Open to OJT opportunities in cybersecurity, AI and software development. The quickest way to see my work or reach me is GitHub.</p>
-              <div className="btns"><a className="btn p" href={GH} target="_blank" rel="noopener noreferrer">github.com/ChelseayReblora ↗</a></div>
+              <p className="lead">Open to OJT opportunities in cybersecurity, AI and software development. Reach me by email or LinkedIn, or see my work on GitHub.</p>
+              <div className="btns">
+                <a className="btn p" href={`mailto:${EMAIL}`}>Email me</a>
+                <a className="btn" href={LI} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a className="btn" href={GH} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              </div>
+              <p className="lead" style={{ marginTop: 18, fontFamily: "var(--mono)", fontSize: ".9rem" }}>{EMAIL}</p>
             </div>
           </Reveal>
         </Section>
