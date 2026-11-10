@@ -6,11 +6,9 @@ const roles = ["Computer Engineer", "Cybersecurity Specialist", "AI & Computer V
 
 const projects = [
   { t: "Back Exercise Form Detection (Undergraduate Thesis)", m: "FIRST AUTHOR · MAPÚA UNIVERSITY",
-    d: "Common Back Muscle Exercises in Gyms: Form Detection Using Optical Flow and Gated Recurrent Unit Networks. Motion features from video feed a GRU model that judges exercise form, developed with academic researchers and physical-training consultants.",
-    tags: ["Computer Vision", "Optical Flow", "GRU", "Deep Learning"] },
-  { t: "backex-feature-roi-point-isolation", m: "COMPUTER VISION · REPOSITORY",
-    d: "Machine-learning code that isolates region-of-interest points for the thesis pipeline, turning raw exercise video into features the model can learn from.",
-    tags: ["Python", "ML", "Feature Extraction"], href: `${GH}/backex-feature-roi-point-isolation` },
+    d: "Common Back Muscle Exercises in Gyms: Form Detection Using Optical Flow and Gated Recurrent Unit Networks. Motion features from exercise video feed a GRU model that judges form, developed with academic researchers and physical-training consultants. The computer vision code, including ROI point isolation for feature extraction, is in the backex-feature-roi-point-isolation repository.",
+    tags: ["Computer Vision", "Optical Flow", "GRU", "Deep Learning", "Python"],
+    href: `${GH}/backex-feature-roi-point-isolation` },
   { t: "Firebase Inventory Application", m: "SOFTWARE DEVELOPMENT · REPOSITORY",
     d: "An inventory app integrated with Firebase for cloud-backed data storage and management.",
     tags: ["Firebase", "App Dev", "Cloud DB"], href: `${GH}?tab=repositories` },
